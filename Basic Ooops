@@ -1,0 +1,79 @@
+import java.util.*;
+import java.io.*;
+
+/*
+
+Certain Object Oriented Concepts for LinkedList
+1. What is a class?
+Ans: Blueprint/Template of an object, or else a structure 
+which has all the logical information(name, age, section, marks...etc) for an entity(Student)
+at one place. 
+class Student{
+    String name;
+    Integer age;
+    String section;
+}
+Object of Student class. 
+
+2. What is an object of class?
+In class we have all the logical information that we require at one place.
+Using object I can create as many instances of the class as much as I want.
+Student st = new Student(); st is the instance
+st.name = "Rahul"
+Student st2 = new Student();
+st2.name = "Raj"
+System.out.prinln(st.name); //"Rahul"
+Student[] students = new Student[1000];
+students[i].name;
+
+Which helps me to access all the information for that object.
+
+3. What is a static variable, and static method?
+4. What is a constructor?
+Ans: It allocates memory for the object and also intialises the object.
+
+5. What is method overloading in Java?
+
+
+
+*/
+
+class Student{
+    public String name;
+    public Integer age;
+    public String section;
+}
+
+class Main{
+
+    /*
+
+    */
+
+    public static void changeName(Student student){
+        System.out.println(student);
+        student.name = "Mohnish";
+    }
+
+    public static void main(String args[]){
+
+        Student[] student = new Student[2];
+        // Array of Objects
+        //student[0] is one object
+        //[null, null]
+        student[0] = new Student();
+        student[1] = new Student();
+        //Student@6ff3c5b5 - Memory Address
+        //Student@3764951d - Memory Address
+        //It says that this memory should only be referred by Object of Student class
+        // System.out.println(student[0]); //Object reference or in c++ pointer
+        // System.out.println(student[1]);
+
+        Student st = new Student();
+        System.out.println(st);
+        st.name = "Rahul";
+        changeName(st);
+        System.out.println(st.name);
+
+    }
+}
